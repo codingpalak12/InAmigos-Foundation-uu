@@ -1,4 +1,4 @@
-/* ========== COLOR THEME - CHANGE HERE EASILY ========== */
+/* ========== COLOR THEME ========== */
 :root {
   --forest: #1B4332;
   --leaf: #2D6A4F;
@@ -374,25 +374,8 @@ a {
   gap: 10px;
   flex-wrap: wrap;
 }
-
-/* ========== FOOTER ========== */
-.footer {
-  background: #15291E;
-  color: #8aa898;
-  padding: 50px 7%;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 30px;
-  font-size: 14px;
-}
-
-.footer h4 {
-  color: #D8F3DC;
-  margin-bottom: 12px;
-  font-family: 'Fraunces';
-}
-
 /* ========== CONTACT PAGE ========== */
+
 .v-wrap {
   max-width: 1100px;
   margin: 0 auto;
@@ -492,6 +475,24 @@ a {
   color: white;
   transform: translateY(-2px);
 }
+
+/* ========== FOOTER ========== */
+.footer {
+  background: #15291E;
+  color: #8aa898;
+  padding: 50px 7%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.footer h4 {
+  color: #D8F3DC;
+  margin-bottom: 12px;
+  font-family: 'Fraunces';
+}
+
 
 @media (max-width: 800px) {
   .v-wrap {
