@@ -219,7 +219,7 @@ h4 {
 }
 
 .hero-image {
-  height: clamp(320px, 40vw, 520px);
+  height: clamp(320px, 40vw, 460px);
   border-radius: 50% 0 50% 0;
   overflow: hidden;
   background: var(--light-leaf);
