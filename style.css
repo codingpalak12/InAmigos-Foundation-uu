@@ -380,14 +380,17 @@ a {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  flex-direction: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 18px;
   align-items: stretch;
+  padding: 0 16px;
 }
 
 .v-left {
-  flex: 1 1 400px;
-  min-width: 300px;
+  flex: 1 1 380px;
+  min-width: 0;
+  max-width: 100%;
   box-sizing: borderbox;
   background-color: var(--moss);
   object-fit: cover;
@@ -423,6 +426,8 @@ a {
   text-decoration: none;
   color: white;
   transition: .2s;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .v-row:hover {
@@ -430,7 +435,15 @@ a {
   color: #121212;
 }
 
+.v-row span, .v-row a {
+  flex: 1;
+  min-width: 0;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  font-size: clamp(12px, 3.5vw, 15px);
+
 .v-ic {
+  flex-shrink: 0;
   width: 38px;
   height: 38px;
   background: white;
@@ -442,8 +455,9 @@ a {
 }
 
 .v-right {
-  flex: 1 1 400px;
-  min-width: 300px;
+  flex: 1 1 380px;
+  min-width: 0;
+  max-width: 100%;
   box-sizing: border-box;
   background-image: url('golden-background.avif');
   background-size: cover;
@@ -480,7 +494,11 @@ a {
   color: white;
   transform: translateY(-2px);
 }
-
+@media (max-width: 900px) {
+  .v-wrap { flex-direction: column; }
+  .v-left, .v-right { flex: 1 1 100%; width: 100% }
+}
+  
 /* ========== FOOTER ========== */
 .footer {
   background: #15291E;
